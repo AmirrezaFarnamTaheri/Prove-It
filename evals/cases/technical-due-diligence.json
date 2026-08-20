@@ -1,0 +1,12 @@
+{
+  "task": {
+    "objective": "Perform an evidence-backed technical due-diligence assessment of an unfamiliar software platform, identifying material risks, reusable assets, modernization opportunities, and an implementation-ready priority roadmap.",
+    "deliverables": ["Executive due-diligence report", "Asset and capability inventory", "Prioritized opportunity roadmap"],
+    "acceptance_criteria": ["Whole-system claims include corpus accounting", "Material findings distinguish evidence from inference", "Risks and value opportunities are both assessed"]
+  },
+  "template": "due-diligence",
+  "adapter": "generic",
+  "profiles": ["technical-due-diligence", "audit-remediation", "peer-benchmarking"],
+  "required_substrings": ["<due_diligence_profile>", "<audit_profile>", "<benchmarking_profile>", "<task_mode>technical_due_diligence</task_mode>", "Asset/Capability Inventory"],
+  "forbidden_substrings": ["[INSERT", "always 10x"]
+}

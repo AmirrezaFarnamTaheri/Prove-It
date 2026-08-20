@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "prove-it": {
+      "command": "prove-it-mcp",
+      "args": [],
+      "env": {}
+    }
+  }
+}

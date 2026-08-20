@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+include manifest.json
+recursive-include adapters *.md
+recursive-include skills/prove-it *.md *.yaml
+recursive-include evals/cases *.json

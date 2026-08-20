@@ -1,0 +1,56 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: Install test and MCP dependencies
+        run: python3 -m pip install -e '.[dev,mcp]'
+
+      - name: Verify source tree and generated prompt
+        run: make check
+
+      - name: Build wheel
+        run: make wheel
+
+      - name: Verify wheel contents
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+
+          wheel = next(Path('wheelhouse').glob('prove_it_protocol-*.whl'))
+          required = {
+              'prove_it/resources/manifest.json',
+              'prove_it/resources/skills/prove-it/SKILL.md',
+              'prove_it/resources/skills/prove-it/protocols/core.md',
+              'prove_it/resources/skills/prove-it/profiles/security.md',
+              'prove_it/resources/skills/prove-it/templates/implementation.md',
+              'prove_it/resources/evals/cases/simple-bugfix.json',
+              'prove_it/mcp_server.py',
+          }
+          with ZipFile(wheel) as archive:
+              names = set(archive.namelist())
+              missing = required - names
+              assert not missing, f'missing wheel resources: {sorted(missing)}'
+              assert not any('__pycache__' in name or name.endswith('.pyc') for name in names)
+          print(f'wheel OK: {wheel}')
+          PY
+
+      - name: Smoke test clean wheel install
+        run: |
+          target="$(mktemp -d)"
+          wheel="$(find wheelhouse -name 'prove_it_protocol-*.whl' -print -quit)"
+          python3 -m pip install --no-deps --target "$target" "$wheel"
+          PYTHONPATH="$target" python3 -m prove_it list
+          PYTHONPATH="$target" python3 -m prove_it --root "$target/prove_it/resources" eval

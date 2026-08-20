@@ -1,0 +1,16 @@
+{
+  "name": "prove-it",
+  "description": "Evidence-driven engineering discipline with technical due diligence and an optional local proof engine for acceptance criteria, source evidence, verification, and honest completion claims.",
+  "version": "0.4.0",
+  "author": {
+    "name": "Prove It contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "engineering",
+    "verification",
+    "agent-skills",
+    "mcp",
+    "testing"
+  ]
+}

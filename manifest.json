@@ -1,0 +1,36 @@
+{
+  "name": "Prove It",
+  "version": "0.4.0",
+  "core": "skills/prove-it/protocols/core.md",
+  "profiles": {
+    "security": {"path": "skills/prove-it/profiles/security.md", "description": "Trust boundaries, auth, secrets, untrusted input, secure handling."},
+    "data-migrations": {"path": "skills/prove-it/profiles/data-migrations.md", "description": "Persistence, schema evolution, migration and recovery."},
+    "concurrency-runtime": {"path": "skills/prove-it/profiles/concurrency-runtime.md", "description": "Workers, async lifecycles, queues, shutdown and backpressure."},
+    "performance": {"path": "skills/prove-it/profiles/performance.md", "description": "Measurement-driven performance and scalability work."},
+    "stateful-systems": {"path": "skills/prove-it/profiles/stateful-systems.md", "description": "Explicit state transitions, invariants and recovery."},
+    "ui-ux": {"path": "skills/prove-it/profiles/ui-ux.md", "description": "User-facing interface quality and accessibility."},
+    "cli-tui": {"path": "skills/prove-it/profiles/cli-tui.md", "description": "CLI/TUI behavior, rendering and terminal semantics."},
+    "consolidation": {"path": "skills/prove-it/profiles/consolidation.md", "description": "Repository/platform convergence and capability absorption."},
+    "architecture-reconstruction": {"path": "skills/prove-it/profiles/architecture-reconstruction.md", "description": "Evidence-backed architecture maps and canonical models."},
+    "high-assurance-validation": {"path": "skills/prove-it/profiles/high-assurance-validation.md", "description": "Property, fuzz, differential, mutation and fault testing."},
+    "peer-benchmarking": {"path": "skills/prove-it/profiles/peer-benchmarking.md", "description": "Primary-source research and peer-system comparison."},
+    "audit-remediation": {"path": "skills/prove-it/profiles/audit-remediation.md", "description": "Evidence-backed audit, verdict and authorized remediation."},
+    "technical-due-diligence": {"path": "skills/prove-it/profiles/technical-due-diligence.md", "description": "Executive technical due diligence, asset inventory, risk/value assessment, and opportunity prioritization."}
+  },
+  "templates": {
+    "implementation": {"path": "skills/prove-it/templates/implementation.md", "description": "Feature, bugfix and production implementation tasks."},
+    "research": {"path": "skills/prove-it/templates/research.md", "description": "Source-backed research and discovery."},
+    "planning": {"path": "skills/prove-it/templates/planning.md", "description": "Architecture and dependency-aware planning."},
+    "audit": {"path": "skills/prove-it/templates/audit.md", "description": "Code/implementation/readiness review."},
+    "consolidation": {"path": "skills/prove-it/templates/consolidation.md", "description": "Migration and target-state convergence."},
+    "architecture": {"path": "skills/prove-it/templates/architecture.md", "description": "Implemented architecture reconstruction."},
+    "universal": {"path": "skills/prove-it/templates/universal.md", "description": "Auto-route arbitrary engineering tasks with proportional rigor."},
+    "due-diligence": {"path": "skills/prove-it/templates/due-diligence.md", "description": "Executive technical due diligence and technical asset assessment."}
+  },
+  "adapters": {
+    "generic": {"path": "adapters/generic.md", "description": "Model-agnostic adapter."},
+    "openai": {"path": "adapters/openai.md", "description": "OpenAI-oriented instruction/input guidance."},
+    "anthropic": {"path": "adapters/anthropic.md", "description": "Anthropic-oriented structured-prompt guidance."},
+    "gemini": {"path": "adapters/gemini.md", "description": "Gemini-oriented explicit-instruction guidance."}
+  }
+}

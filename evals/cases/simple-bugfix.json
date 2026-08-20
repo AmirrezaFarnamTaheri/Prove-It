@@ -1,0 +1,12 @@
+{
+  "task": {
+    "objective": "Fix an off-by-one bug in a bounded pagination helper without changing unrelated behavior.",
+    "deliverables": ["Correct implementation", "Regression test"],
+    "acceptance_criteria": ["Existing tests remain green", "New boundary test passes"]
+  },
+  "template": "implementation",
+  "adapter": "generic",
+  "profiles": [],
+  "required_substrings": ["<engineering_quality>", "<task_mode>production_implementation</task_mode>", "## Objective"],
+  "forbidden_substrings": ["<security_profile>", "[INSERT"]
+}
