@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prove-it-protocol"
+version = "0.4.0"
+description = "Evidence-driven engineering plugin, prompt framework, and local MCP proof engine."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Prove It contributors"}]
+keywords = ["agents", "agent-skills", "mcp", "prompt-engineering", "software-engineering", "verification"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only"
+]
+
+[project.optional-dependencies]
+mcp = ["mcp>=2,<3"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+"prove-it" = "prove_it.cli:main"
+"prove-it-mcp" = "prove_it.mcp_server:main"
+"prove-it-proof" = "prove_it.proof_cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,18 @@
+{
+  "objective": "Reconstruct the actual implemented architecture of the repository and produce synchronized human-readable and machine-readable architecture artifacts.",
+  "target": "The latest verifiable requested repository revision",
+  "deliverables": [
+    "Interactive architecture visualization",
+    "Machine-readable canonical architecture model"
+  ],
+  "constraints": [
+    "Do not infer architecture from directory names alone",
+    "Do not expose secret values",
+    "Represent uncertainty explicitly"
+  ],
+  "acceptance_criteria": [
+    "Important nodes, relationships, and flows have source evidence",
+    "Relationship semantics distinguish runtime/data/deployment/trust concerns",
+    "Both artifacts are generated from one canonical model and cross-validated"
+  ]
+}

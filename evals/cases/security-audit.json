@@ -1,0 +1,12 @@
+{
+  "task": {
+    "objective": "Audit and, where authorized, remediate authentication and authorization handling in an existing web service.",
+    "deliverables": ["Evidence-backed findings", "Verified fixes", "Regression protection"],
+    "constraints": ["Do not invent vulnerabilities", "Preserve public API compatibility unless a verified security defect requires change"]
+  },
+  "template": "audit",
+  "adapter": "openai",
+  "profiles": ["security", "audit-remediation", "high-assurance-validation"],
+  "required_substrings": ["<security_profile>", "<audit_profile>", "<high_assurance_profile>", "<task_mode>audit_verification</task_mode>"],
+  "forbidden_substrings": ["[INSERT"]
+}

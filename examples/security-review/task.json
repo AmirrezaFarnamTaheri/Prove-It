@@ -1,0 +1,20 @@
+{
+  "objective": "Review an existing web application's authentication and authorization implementation, remediate verified defects that are within scope, and prove the fixes with targeted regression tests.",
+  "target": "./src/auth and all directly affected request/resource boundaries",
+  "deliverables": [
+    "Evidence-backed findings",
+    "Implemented fixes for verified in-scope defects",
+    "Regression tests",
+    "Concise validation summary"
+  ],
+  "constraints": [
+    "Do not invent vulnerabilities",
+    "Preserve unrelated public behavior",
+    "Do not expose secrets found during inspection"
+  ],
+  "acceptance_criteria": [
+    "Each material security claim maps to concrete evidence",
+    "Relevant tests pass after remediation",
+    "Unverified concerns are labeled as inference or unknown"
+  ]
+}

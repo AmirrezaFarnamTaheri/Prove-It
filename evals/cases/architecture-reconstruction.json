@@ -1,0 +1,12 @@
+{
+  "task": {
+    "objective": "Reconstruct the implemented runtime architecture of a repository and produce synchronized human- and machine-readable architecture artifacts.",
+    "deliverables": ["Interactive architecture map", "Machine-readable architecture model"],
+    "acceptance_criteria": ["All important relationships are evidence-backed", "Cross-artifact IDs and flows agree"]
+  },
+  "template": "architecture",
+  "adapter": "anthropic",
+  "profiles": ["architecture-reconstruction", "peer-benchmarking"],
+  "required_substrings": ["<architecture_profile>", "<benchmarking_profile>", "<task_mode>architecture_reconstruction</task_mode>", "<canonical_model>"],
+  "forbidden_substrings": ["[INSERT"]
+}

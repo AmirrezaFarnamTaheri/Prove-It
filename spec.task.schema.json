@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:prove-it:task:1.0",
+  "title": "Prove It Task",
+  "description": "Portable input contract for the Prove It prompt composer.",
+  "type": "object",
+  "required": ["objective"],
+  "properties": {
+    "objective": {"type": "string", "minLength": 1},
+    "target": {"type": "string"},
+    "context": {"type": ["string", "array"], "items": {"type": "string"}},
+    "deliverables": {"type": ["string", "array"], "items": {"type": "string"}},
+    "constraints": {"type": ["string", "array"], "items": {"type": "string"}},
+    "acceptance_criteria": {"type": ["string", "array"], "items": {"type": "string"}},
+    "source_state": {"type": "string"},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "prove-it",
+  "metadata": {
+    "description": "Evidence-driven engineering and provable completion for coding agents."
+  },
+  "owner": {
+    "name": "Prove It contributors"
+  },
+  "plugins": [
+    {
+      "name": "prove-it",
+      "description": "Evidence-driven engineering skill with technical due diligence and an optional local MCP proof engine.",
+      "version": "0.4.0",
+      "author": {
+        "name": "Prove It contributors"
+      },
+      "source": "./",
+      "category": "developer-tools",
+      "tags": [
+        "agents",
+        "engineering",
+        "verification",
+        "mcp",
+        "skills",
+        "testing"
+      ]
+    }
+  ]
+}
